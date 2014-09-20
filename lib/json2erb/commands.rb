@@ -11,7 +11,7 @@ module Json2erb
       @global_options = config[:shell].base.options
     end
 
-    desc "-i", %Q{exsample. echo {"fuga":"hoge"} | json2erb -i -e test.erb}
+    desc "-i", %Q{exsample. echo '{"fuga":"hoge"}' | json2erb -i -e test.erb}
     option :json, aliases: '-j', type: :string, default: nil, desc: 'json file'
     option :erb, aliases: '-e', type: :string, default: nil, required: true, desc: 'erb file'
     def inline
