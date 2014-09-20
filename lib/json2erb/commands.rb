@@ -28,7 +28,7 @@ module Json2erb
         data = Yajl::Parser.parse(buffer)
       rescue => e
         data = []
-        buffer.split("\n").each do |line|
+        buffer.lines.each do |line|
           data << Yajl::Parser.parse(line)
         end
       end
